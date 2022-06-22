@@ -15,15 +15,19 @@ const whiteList = ['/login', '/404'] // 白名单
 // next(false)：不放行，不跳转
 // next(error)：抛出异常，不跳转
 // next(地址)：跳转到指定路由
-router.beforeEach((to, from, next) => {
+router.beforeEach(async(to, from, next) => {
     // 开启进度条
     NProgress.start()
         // 判断是都有token
     if (store.getters.token) {
+        // 有token情况下获取用户信息
         // 如果有token，则放行
         if (to.path === '/login') {
             next('/') // 跳转到首页
         } else {
+            // if (!store.getters.userId) {
+            //     await store.dispatch('user/getUserInfo')
+            // }
             next() // 放行
         }
     } else {

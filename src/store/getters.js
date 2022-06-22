@@ -1,7 +1,7 @@
 /*
  * @Author: luo_h603
  * @Date: 2022-06-20 15:31:47
- * @LastEditTime: 2022-06-21 15:42:38
+ * @LastEditTime: 2022-06-22 10:36:15
  * @LastEditors: luo_h603
  * @Description: 快捷方式
  * God help those who help themselves
@@ -10,7 +10,9 @@ const getters = {
     sidebar: state => state.app.sidebar,
     device: state => state.app.device,
     token: state => state.user.token, // 在根级的getters上 开发子模块的属性给别人看
-    avatar: state => state.user.avatar,
-    name: state => state.user.name
+    name: state => state.user.userInfo.username, // 建立用户名称的映射
+    userId: state => state.user.userInfo.userId, // 建立用户id的映射
+    // avatar: state => state.user.avatar,
+    // name: state => state.user.name
 }
 export default getters

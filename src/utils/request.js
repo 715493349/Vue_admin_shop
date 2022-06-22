@@ -1,13 +1,14 @@
 /*
  * @Author: luo_h603
  * @Date: 2022-06-20 15:31:47
- * @LastEditTime: 2022-06-21 15:09:51
+ * @LastEditTime: 2022-06-22 10:43:57
  * @LastEditors: luo_h603
  * @Description: axios二次封装
  * God help those who help themselves
  */
 
 import axios from 'axios'
+import store from '@/store'
 import { Message } from 'element-ui'
 
 const request = axios.create({
@@ -19,6 +20,11 @@ const request = axios.create({
 // 请求拦截器
 request.interceptors.request.use(config => {
     // 在请求发送之前
+    // 注入token
+    if (store.getters.token) {
+        // config.headers.Authorization = `Bearer ${store.getters.token}`
+        config.headers['Authorization'] = `Bearer ${store.getters.token}`
+    }
     return config
 }, error => {
     // 对请求错误
@@ -43,4 +49,4 @@ request.interceptors.response.use(response => {
     return Promise.reject(error) //返回执行错误的Promise，
 })
 
-export default service
+export default request

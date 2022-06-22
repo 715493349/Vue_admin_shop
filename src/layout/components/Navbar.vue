@@ -1,7 +1,7 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-06-20 15:31:47
- * @LastEditTime: 2022-06-21 17:29:00
+ * @LastEditTime: 2022-06-22 18:21:14
  * @LastEditors: luo_h603
  * @Description: 导航栏
  * God help those who help themselves
@@ -24,7 +24,7 @@
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
           <!-- <img :src="avatar + '?imageView2/1/w/80/h/80'" class="user-avatar" /> -->
-          <img src="@/assets/common/bigUserHeader.png" class="user-avatar" />
+          <img src="@/assets/common/1.png" class="user-avatar" />
           <span class="name">管理员</span>
           <i class="el-icon-caret-bottom" style="color: #000" />
         </div>
@@ -34,7 +34,7 @@
           </router-link>
           <a
             target="_blank"
-            href="https://github.com/715493349/vue_admin__.git"
+            href="https://github.com/715493349/Vue_admin_shop.git"
           >
             <el-dropdown-item>Github地址</el-dropdown-item>
           </a>
@@ -58,7 +58,7 @@ export default {
     Hamburger,
   },
   computed: {
-    ...mapGetters(["sidebar", "avatar"]),
+    ...mapGetters(["sidebar", "avatar", "name"]),
   },
   methods: {
     toggleSideBar() {
@@ -66,7 +66,7 @@ export default {
     },
     async logout() {
       await this.$store.dispatch("user/logout");
-      this.$router.push(`/login?redirect=${this.$route.fullPath}`);
+      this.$router.push(`/login`);
     },
   },
 };
@@ -105,6 +105,9 @@ export default {
     margin-left: 10px;
     color: #000;
     cursor: text;
+    background: linear-gradient(to right, #254d86, #3a6073);
+    -webkit-background-clip: text;
+    color: transparent;
     // .breadBtn {
     //   background: #84a9fe;
     //   font-size: 14px;
