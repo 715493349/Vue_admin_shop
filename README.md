@@ -1,4 +1,4 @@
-## Build Setup
+## 构建设置
 
 ```bash
 # 克隆项目
