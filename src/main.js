@@ -1,3 +1,11 @@
+/*
+ * @Author: luo_h603
+ * @Date: 2022-06-20 15:31:47
+ * @LastEditTime: 2022-06-23 17:04:26
+ * @LastEditors: luo_h603
+ * @Description: 
+ * God help those who help themselves
+ */
 import Vue from 'vue'
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
@@ -14,6 +22,9 @@ import router from './router'
 
 import '@/icons' // icon
 import '@/permission' // 权限控制
+
+import Component from '@/components' // 全局公共组件
+Vue.use(Component) //注册全局公共组件
 
 /**
  * If you don't want to use mock-server
