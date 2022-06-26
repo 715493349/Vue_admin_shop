@@ -1,7 +1,7 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-06-20 15:31:47
- * @LastEditTime: 2022-06-23 17:05:02
+ * @LastEditTime: 2022-06-26 16:21:39
  * @LastEditors: luo_h603
  * @Description: 
  * God help those who help themselves
@@ -26,6 +26,7 @@
       </template>
       <!-- <el-button slot="right" type="primary">导入Excel</el-button> -->
     </pageTools>
+    <UploadExcel></UploadExcel>
   </div>
 </template>
 

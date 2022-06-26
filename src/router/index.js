@@ -68,6 +68,20 @@ export const constantRoutes = [{
             }
         }]
     },
+    {
+        path: '/import',
+        component: Layout,
+        hidden: true,
+        children: [{
+            path: '', //二级路由
+            component: () =>
+                import ('@/views/import/index'),
+            meta: {
+                title: '导入',
+                icon: 'import'
+            }
+        }]
+    },
 
 
     // 404 page must be placed at the end !!!

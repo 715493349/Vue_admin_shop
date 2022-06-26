@@ -1,7 +1,7 @@
 /*
  * @Author: luo_h603
  * @Date: 2022-06-20 15:31:47
- * @LastEditTime: 2022-06-23 17:04:26
+ * @LastEditTime: 2022-06-24 14:50:58
  * @LastEditors: luo_h603
  * @Description: 
  * God help those who help themselves
@@ -24,7 +24,17 @@ import '@/icons' // icon
 import '@/permission' // 权限控制
 
 import Component from '@/components' // 全局公共组件
+
+import * as filters from '@/filters' // 引入工具类
+// 注册全局的过滤器
+Object.keys(filters).forEach(key => {
+    // 注册过滤器
+    Vue.filter(key, filters[key])
+})
+
 Vue.use(Component) //注册全局公共组件
+
+
 
 /**
  * If you don't want to use mock-server

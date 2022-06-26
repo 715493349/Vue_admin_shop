@@ -1,14 +1,14 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-06-22 14:47:02
- * @LastEditTime: 2022-06-23 16:13:59
+ * @LastEditTime: 2022-06-24 09:22:31
  * @LastEditors: luo_h603
  * @Description: 公司设置
  * God help those who help themselves
 -->
 <template>
   <div class="header-one">
-    <el-card style="height: 860px">
+    <el-card style="height: 900px">
       <el-tabs v-model="activeName">
         <el-tab-pane label="用户管理" name="first">
           <el-row style="height: 60px; line-height: 60px">
