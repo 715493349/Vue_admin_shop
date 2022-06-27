@@ -147,9 +147,18 @@ export default {
     display: none;
     z-index: -9999;
   }
+  .btn-upload {
+    border-left: 1px dashed#bbb;
+    border-right: 1px dashed#bbb;
+  }
+  .drop {
+    border-right: 1px dashed#bbb;
+  }
   .btn-upload,
   .drop {
-    border: 1px dashed #bbb;
+    // border: 1px dashed #bbb;
+    border-top: 1px dashed#bbb;
+    border-bottom: 1px dashed#bbb;
     width: 350px;
     height: 160px;
     text-align: center;
@@ -159,6 +168,7 @@ export default {
     line-height: 80px;
     color: #bbb;
     i {
+      margin-top: 20px;
       font-size: 60px;
       display: block;
     }

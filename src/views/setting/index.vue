@@ -1,7 +1,7 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-06-22 14:47:02
- * @LastEditTime: 2022-06-24 09:22:31
+ * @LastEditTime: 2022-06-26 21:08:05
  * @LastEditors: luo_h603
  * @Description: 公司设置
  * God help those who help themselves
@@ -70,6 +70,7 @@
             style="height: 60px"
           >
             <el-pagination
+            background
               :current-page.sync="page.page"
               :page-size="page.pagesize"
               :total="page.total"
@@ -113,7 +114,11 @@
       </el-tabs>
     </el-card>
     <!-- 编辑对话框 -->
-    <el-dialog title="编辑" :visible.sync="showDialog" @close="btnCancel">
+    <el-dialog
+      :title="`${roleForm.id ? '编辑' : '新增'}`"
+      :visible.sync="showDialog"
+      @close="btnCancel"
+    >
       <el-form
         ref="roleForm"
         :model="roleForm"
@@ -157,7 +162,7 @@ export default {
       list: [], // 接收角色列表数据
       page: {
         page: 1,
-        pagesize: 10,
+        pagesize: 5,
         total: 0,
       },
       // 公司信息
