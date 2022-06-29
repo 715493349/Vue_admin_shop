@@ -1,7 +1,7 @@
 <!--
  * @Author: luo_h603
  * @Date: 2022-06-20 15:31:47
- * @LastEditTime: 2022-06-27 16:06:51
+ * @LastEditTime: 2022-06-28 18:10:41
  * @LastEditors: luo_h603
  * @Description: 
  * God help those who help themselves
@@ -16,8 +16,8 @@
             <img src="@/assets/common/1.png" />
           </div>
           <div class="headInfoTip">
-            <p class="firstChild">早安，管理员，祝你开心每一天！</p>
-            <p class="lastChild">早安，管理员，祝你开心每一天！</p>
+            <p class="firstChild">早安，恒恒管理员，祝你开心每一天！</p>
+            <p class="lastChild">早安，打工人，今天又是新的一天！</p>
           </div>
         </div>
         <div class="fr" />
@@ -47,7 +47,7 @@
                     <div>
                       <p>
                         <span class="col">朱继柳</span> 发布了
-                        第1期“传智大讲堂”互动讨论获奖名单公布
+                        第1期“开讲啦大讲堂”互动讨论获奖名单公布
                       </p>
                       <p>2018-07-21 15:21:38</p>
                     </div>
@@ -59,7 +59,7 @@
                     <div>
                       <p>
                         <span class="col">朱继柳</span> 发布了
-                        第2期“传智大讲堂”互动讨论获奖名单公布
+                        第2期“开讲啦智大讲堂”互动讨论获奖名单公布
                       </p>
                       <p>2018-07-21 15:21:38</p>
                     </div>
@@ -71,7 +71,7 @@
                     <div>
                       <p>
                         <span class="col">朱继柳</span> 发布了
-                        第3期“传智大讲堂”互动讨论获奖名单公布
+                        第3期“开讲啦大讲堂”互动讨论获奖名单公布
                       </p>
                       <p>2018-07-21 15:21:38</p>
                     </div>
@@ -103,6 +103,7 @@
             <span>绩效指数</span>
           </div>
           <!-- 放置雷达图 -->
+          <Radar />
         </el-card>
         <!-- 帮助连接 -->
         <el-card class="box-card">
@@ -140,10 +141,12 @@
 <script>
 import { mapGetters } from "vuex";
 import WordCalendar from "./components/WorkCalendar.vue";
+import Radar from "./components/radar.vue";
 export default {
   name: "Dashboard",
   components: {
     WordCalendar,
+    Radar,
   },
   computed: {
     ...mapGetters(["name"]),
